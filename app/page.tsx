@@ -490,66 +490,95 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Torino */}
-      <section className="py-32 bg-white">
+     
+
+      {/* Sponsors/Partners Section */}
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-20 items-center">
-            <div className="space-y-8">
-              <div className="flex items-center gap-6 mb-12">
-                <div className="p-4 bg-primary-600 rounded-xl shadow-md">
-                  <MapPin className="h-10 w-10 text-white" />
-                </div>
-                <div>
-                  <span className="block text-sm font-bold text-primary-600 mb-2 uppercase tracking-wider">Location</span>
-                  <h2 className="text-5xl md:text-6xl font-extrabold text-gray-900">Torino, Italy</h2>
-                </div>
-              </div>
-              <div className="space-y-6">
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                  Piedmont's capital, Torino is a city with a unique charm, an important history that has left its mark 
-                  on this metropolis that speaks of the past, whilst constantly looking to the future.
-                </p>
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                  At the foot of the Alps, Turin was once the capital of the House of Savoy and birthplace of the Italian resurgence. 
-                  Today, it is an innovation hub of Italian industry, rich in art and culture.
-                </p>
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                  Dynamic and baroque, Turin wows with its renowned Egyptian museum, architectural and monumental wonders, 
-                  art galleries, international events and delicious traditional food.
-                </p>
-              </div>
+          <ScrollAnimation animationIn="fade-in-up" delay={0}>
+            <div className="text-center mb-12">
+              <span className="inline-block px-5 py-2 bg-primary-600 text-white rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+                Partners &amp; Sponsors
+              </span>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+                Our Partners
+              </h2>
+              <div className="w-20 h-1 bg-primary-600 mx-auto"></div>
             </div>
-            <div className="bg-primary-600 rounded-2xl p-12 shadow-xl">
-              <div className="space-y-10">
-                <div className="flex items-start gap-5">
-                  <div className="p-4 bg-white/20 rounded-xl">
-                    <Calendar className="h-8 w-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-2xl text-white mb-2">Conference Dates</h3>
-                    <p className="text-white/90 text-xl">September 14-17, 2026</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-5">
-                  <div className="p-4 bg-white/20 rounded-xl">
-                    <MapPin className="h-8 w-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-2xl text-white mb-2">Location</h3>
-                    <p className="text-white/90 text-xl">Torino, Italy</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-5">
-                  <div className="p-4 bg-white/20 rounded-xl">
-                    <Users className="h-8 w-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-2xl text-white mb-2">Participants</h3>
-                    <p className="text-white/90 text-xl">Experts from industry and academia</p>
-                  </div>
-                </div>
+          </ScrollAnimation>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
+            <ScrollAnimation animationIn="fade-in-up" delay={100}>
+              <div className="flex items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover-lift w-full h-32">
+                <Image
+                  src="/eurolab.jpg"
+                  alt="Eurolab"
+                  width={150}
+                  height={80}
+                  className="w-full h-auto object-contain max-h-20"
+                />
               </div>
-            </div>
+            </ScrollAnimation>
+            
+            <ScrollAnimation animationIn="fade-in-up" delay={200}>
+              <div className="flex items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover-lift w-full h-32">
+                <Image
+                  src="/ASSOTIC.jpg"
+                  alt="ASSOTIC"
+                  width={150}
+                  height={80}
+                  className="w-full h-auto object-contain max-h-20"
+                />
+              </div>
+            </ScrollAnimation>
+            
+            <ScrollAnimation animationIn="fade-in-up" delay={300}>
+              <div className="flex items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover-lift w-full h-32">
+                <Image
+                  src="/accredia.jpg"
+                  alt="ACCREDIA"
+                  width={150}
+                  height={80}
+                  className="w-full h-auto object-contain max-h-20"
+                />
+              </div>
+            </ScrollAnimation>
+            
+            <ScrollAnimation animationIn="fade-in-up" delay={400}>
+              <div className="flex items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover-lift w-full h-32">
+                <Image
+                  src="/eurachem.jpg"
+                  alt="Eurachem"
+                  width={150}
+                  height={80}
+                  className="w-full h-auto object-contain max-h-20"
+                />
+              </div>
+            </ScrollAnimation>
+            
+            <ScrollAnimation animationIn="fade-in-up" delay={500}>
+              <div className="flex items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover-lift w-full h-32">
+                <Image
+                  src="/lorisq1.jpg"
+                  alt="lorisQ"
+                  width={150}
+                  height={80}
+                  className="w-full h-auto object-contain max-h-20"
+                />
+              </div>
+            </ScrollAnimation>
+            
+            <ScrollAnimation animationIn="fade-in-up" delay={600}>
+              <div className="flex items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover-lift w-full h-32">
+                <Image
+                  src="/ecosearch.jpg"
+                  alt="ECOSEARCH"
+                  width={150}
+                  height={80}
+                  className="w-full h-auto object-contain max-h-20"
+                />
+              </div>
+            </ScrollAnimation>
           </div>
         </div>
       </section>

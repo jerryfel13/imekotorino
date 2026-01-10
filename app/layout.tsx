@@ -11,8 +11,8 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: '2025 IMEKO Joint Conference - Torino, Italy',
-  description: 'IMEKO Joint Conference 2025: TC8 - Traceability in Metrology, TC11 - Measurement in Testing, Inspection and Certification, TC24 - Chemical Measurements. September 14-17, 2025, Torino, Italy.',
+  title: '2025 IMEKO Joint Conference - Metro Manila, Philippines',
+  description: 'IMEKO Joint Conference 2025: TC8 - Traceability in Metrology, TC11 - Measurement in Testing, Inspection and Certification, TC24 - Chemical Measurements. September 14-17, 2025, Metro Manila, Philippines.',
 }
 
 export default function RootLayout({

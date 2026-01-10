@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Calendar, MapPin, FileText, Users, Download, ArrowRight, Sparkles, Award, BookOpen, Globe } from 'lucide-react'
+import { Calendar, MapPin, FileText, Users, ArrowRight, Sparkles, Award, BookOpen, Globe } from 'lucide-react'
 import ScrollAnimation from '@/components/ScrollAnimation'
 import TorinoSection from '@/components/TorinoSection'
 
@@ -8,74 +8,38 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative text-white overflow-hidden min-h-[85vh] md:min-h-[90vh] flex items-center">
+      <section className="relative text-white overflow-hidden min-h-[85vh] md:min-h-[90vh] flex items-end justify-center">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/header_torino.jpg"
-            alt="Torino, Italy"
+            alt="Metro Manila, Philippines"
             fill
-            className="object-cover"
+            className="object-cover object-center"
             priority
             quality={90}
             sizes="100vw"
           />
         </div>
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/65 z-10"></div>
+        {/* Minimal overlay only at bottom for button readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent z-10"></div>
         
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-          <div className="text-center space-y-10">
-            <div className="mb-12 flex justify-center">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <Image
-                  src="/logo_imekoto25.png"
-                  alt="IMEKO Joint Conference 2026"
-                  width={600}
-                  height={160}
-                  className="w-full max-w-4xl h-auto object-contain"
-                  priority
-                />
-              </div>
-            </div>
-            
-            <div className="space-y-10">
-              <div>
-                <h1 className="text-5xl md:text-7xl font-extrabold mb-8 text-white leading-tight tracking-tight">
-                  2026 IMEKO Joint Conference
-                </h1>
-                <div className="w-24 h-1 bg-primary-400 mx-auto"></div>
-              </div>
-              
-              <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-lg md:text-xl font-medium">
-                <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
-                  <MapPin className="h-5 w-5" />
-                  <span>Torino, Italy</span>
-                </div>
-                <div className="hidden md:block w-2 h-2 bg-white rounded-full"></div>
-                <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
-                  <Calendar className="h-5 w-5" />
-                  <span>September 14-17, 2026</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-10">
-              <Link
-                href="#call-for-papers"
-                className="group bg-white text-primary-700 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-3 shadow-lg hover:shadow-xl hover-lift"
-              >
-                <span>Submit Your Abstract</span>
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
-              </Link>
-              <Link
-                href="/about/venue"
-                className="group bg-primary-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-primary-700 transition-all duration-300 flex items-center justify-center gap-3 shadow-lg hover:shadow-xl hover-lift"
-              >
-                <span>Learn More</span>
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
-              </Link>
-            </div>
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="#call-for-papers"
+              className="group bg-white text-primary-700 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-3 shadow-2xl hover:shadow-2xl hover:scale-105"
+            >
+              <span>Submit Your Abstract</span>
+              <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
+            </Link>
+            <Link
+              href="/about/venue"
+              className="group bg-primary-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-primary-700 transition-all duration-300 flex items-center justify-center gap-3 shadow-2xl hover:shadow-2xl hover:scale-105"
+            >
+              <span>Learn More</span>
+              <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
+            </Link>
           </div>
         </div>
       </section>
@@ -86,12 +50,13 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             {/* Logo Section */}
             <div className="flex justify-center md:justify-start">
-              <div className="relative w-full max-w-md aspect-[3/4]">
+              <div className="relative w-full max-w-2xl">
                 <Image
-                  src="/logo_imeko.jpg"
-                  alt="IMEKO Logo"
-                  fill
-                  className="object-contain"
+                  src="/logo_imekoto25.png"
+                  alt="IMEKO Joint Conference Logo"
+                  width={800}
+                  height={300}
+                  className="w-full h-auto object-contain"
                 />
               </div>
             </div>
@@ -171,7 +136,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Conference Description with Download Button */}
+      {/* Conference Description */}
       <section className="py-32 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-16 items-start">
@@ -179,10 +144,11 @@ export default function Home() {
             <div className="space-y-8">
               {/* Logos */}
               <div className="flex flex-wrap items-center gap-6">
+              
                 <div className="flex items-center gap-2">
                   <Image
-                    src="/Logo_INRIM.jpg"
-                    alt="INRIM - Istituto Nazionale di Ricerca Metrologica"
+                    src="/onelab.jpg"
+                    alt="OneLab"
                     width={180}
                     height={60}
                     className="h-auto w-auto object-contain"
@@ -190,8 +156,8 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Image
-                    src="/polito.jpg"
-                    alt="Politecnico di Torino"
+                    src="/dost-itdi.png"
+                    alt="DOST-ITDI"
                     width={180}
                     height={60}
                     className="h-auto w-auto object-contain"
@@ -244,27 +210,15 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Right Column - Image and Download Button */}
-            <div className="space-y-6">
-              <div className="relative w-full">
-                <Image
-                  src="/cfpimghome.jpg"
-                  alt="Torino, Italy"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-cover rounded-lg shadow-lg"
-                />
-              </div>
-              <div className="flex justify-center md:justify-start">
-                <a
-                  href="/IMEKO_JointTC8-11-24_v5.pdf"
-                  download
-                  className="inline-flex items-center justify-center bg-primary-600 text-white px-8 py-4 rounded-lg font-bold text-base hover:bg-primary-700 transition-all duration-300 shadow-md hover:shadow-lg"
-                >
-                  <Download className="h-5 w-5 mr-2" />
-                  <span>CLICK HERE TO DOWNLOAD</span>
-                </a>
-              </div>
+            {/* Right Column - Image */}
+            <div className="relative w-full">
+              <Image
+                src="/cfpimghome.jpg"
+                alt="Metro Manila, Philippines"
+                width={600}
+                height={400}
+                className="w-full h-auto object-cover rounded-lg shadow-lg"
+              />
             </div>
           </div>
           
@@ -394,11 +348,11 @@ export default function Home() {
                   <div className="flex items-start gap-3 mb-4">
                     <Calendar className="h-6 w-6 text-primary-600 flex-shrink-0 mt-0.5" />
                     <h3 className="text-sm md:text-xs lg:text-sm font-bold text-gray-900 leading-tight uppercase">
-                      SPECIAL SESSION PROPOSAL DEADLINE
+                      Deadline for Abstract Submission
                     </h3>
                   </div>
                   <p className="text-xl md:text-lg lg:text-xl font-bold text-primary-600 ml-9">
-                    February 15, 2026
+                    01 March 2026<br />(or 15 Mar 2026)
                   </p>
                 </div>
               </ScrollAnimation>
@@ -408,11 +362,11 @@ export default function Home() {
                   <div className="flex items-start gap-3 mb-4">
                     <Calendar className="h-6 w-6 text-primary-600 flex-shrink-0 mt-0.5" />
                     <h3 className="text-sm md:text-xs lg:text-sm font-bold text-gray-900 leading-tight uppercase">
-                      ABSTRACT SUBMISSION DEADLINE
+                      Full Paper Submission
                     </h3>
                   </div>
                   <p className="text-xl md:text-lg lg:text-xl font-bold text-primary-600 ml-9">
-                    March 23, 2026
+                    01 May 2026
                   </p>
                 </div>
               </ScrollAnimation>
@@ -422,11 +376,11 @@ export default function Home() {
                   <div className="flex items-start gap-3 mb-4">
                     <Calendar className="h-6 w-6 text-primary-600 flex-shrink-0 mt-0.5" />
                     <h3 className="text-sm md:text-xs lg:text-sm font-bold text-gray-900 leading-tight uppercase">
-                      FULL PAPER SUBMISSION DEADLINE
+                      End of Peer-Review
                     </h3>
                   </div>
                   <p className="text-xl md:text-lg lg:text-xl font-bold text-primary-600 ml-9">
-                    May 8, 2026
+                    01 June 2026
                   </p>
                 </div>
               </ScrollAnimation>
@@ -436,11 +390,11 @@ export default function Home() {
                   <div className="flex items-start gap-3 mb-4">
                     <Calendar className="h-6 w-6 text-primary-600 flex-shrink-0 mt-0.5" />
                     <h3 className="text-sm md:text-xs lg:text-sm font-bold text-gray-900 leading-tight uppercase">
-                      FINAL PAPER SUBMISSION DEADLINE
+                      Submission of Final Manuscript
                     </h3>
                   </div>
                   <p className="text-xl md:text-lg lg:text-xl font-bold text-primary-600 ml-9">
-                    July 1, 2026
+                    01 July 2026
                   </p>
                 </div>
               </ScrollAnimation>
@@ -449,7 +403,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Torino, Italy Section */}
+      {/* Metro Manila, Philippines Section */}
       <TorinoSection />
 
       {/* Conference Topics */}

@@ -10,11 +10,11 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <Image
-                src="/logo_imeko.jpg"
-                alt="IMEKO Logo"
-                width={150}
-                height={200}
-                className="h-32 w-auto object-contain"
+                src="/logo_imekoto25.png"
+                alt="IMEKO Joint Conference Logo"
+                width={250}
+                height={100}
+                className="h-auto w-full max-w-xs object-contain"
               />
             </div>
             <h3 className="text-xl font-bold mb-4">2025 IMEKO Joint Conference</h3>
@@ -24,7 +24,7 @@ export default function Footer() {
               TC24 - Chemical Measurements
             </p>
             <p className="text-gray-400 text-sm mt-2">
-              TORINO, ITALY / SEPTEMBER 14-17, 2025
+              METRO MANILA, PHILIPPINES / SEPTEMBER 14-17, 2025
             </p>
           </div>
           
@@ -63,7 +63,7 @@ export default function Footer() {
               </a>
             </div>
             <p className="text-gray-400 text-sm mt-4">
-              Torino, Italy<br />
+              Metro Manila, Philippines<br />
               September 14-17, 2025
             </p>
           </div>
@@ -71,7 +71,7 @@ export default function Footer() {
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
           <p>© Copyright 2025. All Rights Reserved.</p>
-          <p className="mt-2">2025 IMEKO Joint Conference - Torino, Italy</p>
+          <p className="mt-2">2025 IMEKO Joint Conference - Metro Manila, Philippines</p>
         </div>
       </div>
     </footer>

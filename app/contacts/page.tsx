@@ -70,7 +70,7 @@ export default function Contacts() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">Location</h3>
                   <p className="text-gray-700">
-                    Torino, Italy<br />
+                    Metro Manila, Philippines<br />
                     September 14-17, 2025
                   </p>
                 </div>
@@ -216,6 +216,7 @@ export default function Contacts() {
     </div>
   )
 }
+
 
 
 

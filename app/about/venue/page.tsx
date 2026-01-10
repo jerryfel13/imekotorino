@@ -5,7 +5,7 @@ export default function Venue() {
     {
       icon: MapPin,
       title: 'Location',
-      content: 'Torino, Italy - At the foot of the Alps',
+      content: 'Metro Manila, Philippines',
     },
     {
       icon: Building,
@@ -165,6 +165,7 @@ export default function Venue() {
     </div>
   )
 }
+
 
 
 

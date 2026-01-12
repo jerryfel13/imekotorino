@@ -1,5 +1,5 @@
 {
-  "name": "imeko-torino-2025",
+  "name": "imeko-torino-2026",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -24,6 +24,7 @@
     "typescript": "^5.3.3"
   }
 }
+
 
 
 

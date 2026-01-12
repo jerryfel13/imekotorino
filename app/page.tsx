@@ -8,9 +8,14 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative text-white overflow-hidden min-h-[85vh] md:min-h-[90vh] flex items-end justify-center">
+      {/* <section className="relative text-white overflow-hidden min-h-[85vh] md:min-h-[90vh] flex items-end justify-center"> */}
+      <section className="relative text-white overflow-hidden">
+
         {/* Background Image */}
-        <div className="absolute inset-0 z-0">
+        <div className="relative w-full overflow-hidden
+                h-[180px] sm:h-[260px] md:h-[360px] lg:h-[450px] xl:h-[520px]">
+
+          {/* Background Image */}
           <Image
             src="/header_torino.jpg"
             alt="Metro Manila, Philippines"
@@ -20,28 +25,39 @@ export default function Home() {
             quality={90}
             sizes="100vw"
           />
-        </div>
-        {/* Minimal overlay only at bottom for button readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent z-10"></div>
-        
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="#call-for-papers"
-              className="group bg-white text-primary-700 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-3 shadow-2xl hover:shadow-2xl hover:scale-105"
-            >
-              <span>Submit Your Abstract</span>
-              <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
-            </Link>
-            <Link
-              href="/about/venue"
-              className="group bg-primary-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-primary-700 transition-all duration-300 flex items-center justify-center gap-3 shadow-2xl hover:shadow-2xl hover:scale-105"
-            >
-              <span>Learn More</span>
-              <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
-            </Link>
+
+          {/* Bottom Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent z-10" />
+
+          {/* Bottom-left Buttons */}
+          <div className="absolute inset-0 z-20 flex items-end justify-start pb-8 sm:pb-12 md:pb-16 pl-4 sm:pl-8 md:pl-16">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="#call-for-papers"
+                className="group bg-white text-primary-700 px-10 py-4 rounded-xl font-bold text-lg
+                 hover:bg-gray-50 transition-all duration-300
+                 flex items-center justify-center gap-3
+                 shadow-2xl hover:scale-105"
+              >
+                <span>Submit Your Abstract</span>
+                <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
+              </Link>
+
+              <Link
+                href="/about/venue"
+                className="group bg-primary-600 text-white px-10 py-4 rounded-xl font-bold text-lg
+                 hover:bg-primary-700 transition-all duration-300
+                 flex items-center justify-center gap-3
+                 shadow-2xl hover:scale-105"
+              >
+                <span>Learn More</span>
+                <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
+              </Link>
+            </div>
           </div>
+
         </div>
+
       </section>
 
       {/* Conference Introduction with IMEKO Logo */}
@@ -60,7 +76,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            
+
             {/* Content Section */}
             <div className="space-y-8">
               <div>
@@ -71,16 +87,16 @@ export default function Home() {
                   Joint Conference
                 </h2>
               </div>
-              
+
               <div className="tech-committee-badge">
                 TECHNICAL COMMITTEES
               </div>
-              
+
               <div className="space-y-3">
                 {/* TC8 Card */}
-                <ScrollAnimation 
-                  animationIn="fade-in-up" 
-                  animationOut="fade-out" 
+                <ScrollAnimation
+                  animationIn="fade-in-up"
+                  animationOut="fade-out"
                   threshold={0.2}
                   rootMargin="0px 0px -100px 0px"
                   delay={0}
@@ -94,11 +110,11 @@ export default function Home() {
                     </h3>
                   </div>
                 </ScrollAnimation>
-                
+
                 {/* TC11 Card */}
-                <ScrollAnimation 
-                  animationIn="fade-in-up" 
-                  animationOut="fade-out" 
+                <ScrollAnimation
+                  animationIn="fade-in-up"
+                  animationOut="fade-out"
                   threshold={0.2}
                   rootMargin="0px 0px -100px 0px"
                   delay={0}
@@ -112,11 +128,11 @@ export default function Home() {
                     </h3>
                   </div>
                 </ScrollAnimation>
-                
+
                 {/* TC24 Card */}
-                <ScrollAnimation 
-                  animationIn="fade-in-up" 
-                  animationOut="fade-out" 
+                <ScrollAnimation
+                  animationIn="fade-in-up"
+                  animationOut="fade-out"
                   threshold={0.2}
                   rootMargin="0px 0px -100px 0px"
                   delay={0}
@@ -144,7 +160,7 @@ export default function Home() {
             <div className="space-y-8">
               {/* Logos */}
               <div className="flex flex-wrap items-center gap-6">
-              
+
                 <div className="flex items-center gap-2">
                   <Image
                     src="/onelab.jpg"
@@ -164,12 +180,12 @@ export default function Home() {
                   />
                 </div>
               </div>
-              
+
               {/* Conference Title */}
               <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
                 2026 IMEKO Joint Conference
               </h2>
-              
+
               {/* Technical Committees Section */}
               <div className="space-y-4">
                 <h3 className="text-sm font-bold text-primary-600 uppercase tracking-wider">
@@ -193,23 +209,23 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Conference Description */}
               <div className="space-y-4">
                 <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                  This international conference aims to gather experts both from industry and academia, 
-                  covering different topics from the fields of <strong className="font-semibold text-primary-700">'Traceability in Metrology' (IMEKO TC8)</strong>, 
+                  This international conference aims to gather experts both from industry and academia,
+                  covering different topics from the fields of <strong className="font-semibold text-primary-700">'Traceability in Metrology' (IMEKO TC8)</strong>,
                   <strong className="font-semibold text-primary-700"> 'Measurement in Testing, Inspection and Certification' (IMEKO TC11)</strong>, and <strong className="font-semibold text-primary-700">'Chemical Measurements' (IMEKO TC24)</strong>.
                 </p>
                 <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                  Considering the wide interdisciplinarity of the three Technical Committees, many topics and metrological 
-                  issues will be addressed during the Conference, including (but not limited to): certified reference materials, 
-                  digitalization in Traceability, digital twins, quality management and conformity assessment in TIC Sector, 
+                  Considering the wide interdisciplinarity of the three Technical Committees, many topics and metrological
+                  issues will be addressed during the Conference, including (but not limited to): certified reference materials,
+                  digitalization in Traceability, digital twins, quality management and conformity assessment in TIC Sector,
                   chemical and biochemical sensors, gas analysis for climate change and energy transition, chemical metrology.
                 </p>
               </div>
             </div>
-            
+
             {/* Right Column - Image */}
             <div className="relative w-full">
               <Image
@@ -221,7 +237,7 @@ export default function Home() {
               />
             </div>
           </div>
-          
+
           {/* Call for Papers Section - Full Width */}
           <div className="mt-16 space-y-4">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
@@ -230,16 +246,16 @@ export default function Home() {
             <div className="w-full h-0.5 bg-primary-600"></div>
             <div className="space-y-4 text-base md:text-lg text-gray-700 leading-relaxed">
               <p>
-                Authors are invited to submit abstracts of 250 words, related to the topics covered by the 3 IMEKO Technical Committees. 
-                After notification of acceptance, Authors will have the opportunity to submit a full paper (3 to 5 pages), 
+                Authors are invited to submit abstracts of 250 words, related to the topics covered by the 3 IMEKO Technical Committees.
+                After notification of acceptance, Authors will have the opportunity to submit a full paper (3 to 5 pages),
                 to be published in the Conference Proceedings.
               </p>
               <p>
-                All contributions will be peer-reviewed and acceptance will be based on quality, originality and relevance. 
+                All contributions will be peer-reviewed and acceptance will be based on quality, originality and relevance.
                 Accepted and presented full papers will be submitted for inclusion in Scopus after the event.
               </p>
               <p>
-                After the Conference, selected Authors will be invited to submit an extended version of their papers to 'Measurement' or to 'Acta IMEKO'. 
+                After the Conference, selected Authors will be invited to submit an extended version of their papers to 'Measurement' or to 'Acta IMEKO'.
                 Additional information about post-conference special issues will be provided on the conference website.
               </p>
             </div>
@@ -261,11 +277,11 @@ export default function Home() {
               <div className="w-20 h-1 bg-primary-600 mx-auto"></div>
             </div>
           </ScrollAnimation>
-          
+
           <div className="grid md:grid-cols-3 gap-6">
-            <ScrollAnimation 
-              animationIn="fade-in-up" 
-              animationOut="fade-out" 
+            <ScrollAnimation
+              animationIn="fade-in-up"
+              animationOut="fade-out"
               threshold={0.2}
               rootMargin="0px 0px -100px 0px"
               delay={0}
@@ -278,10 +294,10 @@ export default function Home() {
                 </p>
               </div>
             </ScrollAnimation>
-            
-            <ScrollAnimation 
-              animationIn="fade-in-up" 
-              animationOut="fade-out" 
+
+            <ScrollAnimation
+              animationIn="fade-in-up"
+              animationOut="fade-out"
               threshold={0.2}
               rootMargin="0px 0px -100px 0px"
               delay={0}
@@ -294,10 +310,10 @@ export default function Home() {
                 </p>
               </div>
             </ScrollAnimation>
-            
-            <ScrollAnimation 
-              animationIn="fade-in-up" 
-              animationOut="fade-out" 
+
+            <ScrollAnimation
+              animationIn="fade-in-up"
+              animationOut="fade-out"
               threshold={0.2}
               rootMargin="0px 0px -100px 0px"
               delay={0}
@@ -327,7 +343,7 @@ export default function Home() {
             backgroundSize: '50px 50px'
           }}></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <ScrollAnimation animationIn="fade-in-up" delay={0}>
             <div className="mb-12">
@@ -340,7 +356,7 @@ export default function Home() {
               <div className="w-40 h-1 bg-primary-600"></div>
             </div>
           </ScrollAnimation>
-          
+
           <div className="bg-white/95 backdrop-blur-sm rounded-xl border border-gray-200 shadow-lg overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-gray-300">
               <ScrollAnimation animationIn="fade-in-up" delay={100}>
@@ -356,7 +372,7 @@ export default function Home() {
                   </p>
                 </div>
               </ScrollAnimation>
-              
+
               <ScrollAnimation animationIn="fade-in-up" delay={200}>
                 <div className="p-8 md:p-6 lg:p-8">
                   <div className="flex items-start gap-3 mb-4">
@@ -370,7 +386,7 @@ export default function Home() {
                   </p>
                 </div>
               </ScrollAnimation>
-              
+
               <ScrollAnimation animationIn="fade-in-up" delay={300}>
                 <div className="p-8 md:p-6 lg:p-8">
                   <div className="flex items-start gap-3 mb-4">
@@ -384,7 +400,7 @@ export default function Home() {
                   </p>
                 </div>
               </ScrollAnimation>
-              
+
               <ScrollAnimation animationIn="fade-in-up" delay={400}>
                 <div className="p-8 md:p-6 lg:p-8">
                   <div className="flex items-start gap-3 mb-4">
@@ -444,7 +460,7 @@ export default function Home() {
         </div>
       </section>
 
-     
+
 
       {/* Sponsors/Partners Section */}
       <section className="py-24 bg-gray-50">
@@ -460,7 +476,7 @@ export default function Home() {
               <div className="w-20 h-1 bg-primary-600 mx-auto"></div>
             </div>
           </ScrollAnimation>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
             <ScrollAnimation animationIn="fade-in-up" delay={100}>
               <div className="flex items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover-lift w-full h-32">
@@ -473,7 +489,7 @@ export default function Home() {
                 />
               </div>
             </ScrollAnimation>
-            
+
             <ScrollAnimation animationIn="fade-in-up" delay={200}>
               <div className="flex items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover-lift w-full h-32">
                 <Image
@@ -485,7 +501,7 @@ export default function Home() {
                 />
               </div>
             </ScrollAnimation>
-            
+
             <ScrollAnimation animationIn="fade-in-up" delay={300}>
               <div className="flex items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover-lift w-full h-32">
                 <Image
@@ -497,7 +513,7 @@ export default function Home() {
                 />
               </div>
             </ScrollAnimation>
-            
+
             <ScrollAnimation animationIn="fade-in-up" delay={400}>
               <div className="flex items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover-lift w-full h-32">
                 <Image
@@ -509,7 +525,7 @@ export default function Home() {
                 />
               </div>
             </ScrollAnimation>
-            
+
             <ScrollAnimation animationIn="fade-in-up" delay={500}>
               <div className="flex items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover-lift w-full h-32">
                 <Image
@@ -521,7 +537,7 @@ export default function Home() {
                 />
               </div>
             </ScrollAnimation>
-            
+
             <ScrollAnimation animationIn="fade-in-up" delay={600}>
               <div className="flex items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover-lift w-full h-32">
                 <Image

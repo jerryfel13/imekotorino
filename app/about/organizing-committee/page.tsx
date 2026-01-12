@@ -5,7 +5,7 @@ export default function OrganizingCommittee() {
     {
       title: 'Conference Chairs',
       members: [
-        { name: 'Prof. Luca Callegaro', affiliation: 'INRIM - Istituto Nazionale di Ricerca Metrologica', role: 'Conference Chair' },
+        { name: 'Michela Sega', affiliation: 'Istituto Nazionale di Ricerca Metrologica (INRiM) Strada delle Cacce, 73 - Torino 10135 ITALY', role: 'Chairperson, IMEKO TC 8', email:'m.sega@inrim.it' },
         { name: 'Prof. Marco Parvis', affiliation: 'Politecnico di Torino', role: 'Co-Chair' },
       ],
     },
@@ -77,6 +77,7 @@ export default function OrganizingCommittee() {
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
                     <p className="text-primary-600 font-medium mb-2">{member.role}</p>
                     <p className="text-gray-600">{member.affiliation}</p>
+                    <p className="text-gray-600">{member.email}</p>
                   </div>
                 ))}
               </div>
@@ -107,8 +108,8 @@ export default function OrganizingCommittee() {
         {/* Note */}
         <div className="mt-12 bg-primary-50 border-l-4 border-primary-600 p-6 rounded-lg">
           <p className="text-gray-800">
-            <strong>Note:</strong> The organizing committee is composed of experts from leading institutions 
-            in metrology, measurement science, and related fields. The committee members are committed to 
+            <strong>Note:</strong> The organizing committee is composed of experts from leading institutions
+            in metrology, measurement science, and related fields. The committee members are committed to
             ensuring a high-quality conference experience for all participants.
           </p>
         </div>

@@ -17,14 +17,14 @@ export default function Footer() {
                 className="h-auto w-full max-w-xs object-contain"
               />
             </div>
-            <h3 className="text-xl font-bold mb-4">2025 IMEKO Joint Conference</h3>
+            <h3 className="text-xl font-bold mb-4">2026 IMEKO Joint Conference</h3>
             <p className="text-gray-400 text-sm">
               TC8 - Traceability in Metrology<br />
               TC11 - Measurement in Testing, Inspection and Certification<br />
               TC24 - Chemical Measurements
             </p>
             <p className="text-gray-400 text-sm mt-2">
-              METRO MANILA, PHILIPPINES / SEPTEMBER 14-17, 2025
+              METRO MANILA, PHILIPPINES / 26-29 August 2026
             </p>
           </div>
           
@@ -58,20 +58,20 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <div className="flex items-center text-gray-400 text-sm">
               <Mail className="mr-2 h-5 w-5" />
-              <a href="mailto:info@imekotorino2025.org" className="hover:text-white transition-colors">
-                info@imekotorino2025.org
+              <a href="mailto:imekomanila2026@gmail.com" className="hover:text-white transition-colors">
+                imekomanila2026@gmail.com
               </a>
             </div>
             <p className="text-gray-400 text-sm mt-4">
               Metro Manila, Philippines<br />
-              September 14-17, 2025
+              26-29 August 2026
             </p>
           </div>
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-          <p>© Copyright 2025. All Rights Reserved.</p>
-          <p className="mt-2">2025 IMEKO Joint Conference - Metro Manila, Philippines</p>
+          <p>© Copyright 2026. All Rights Reserved.</p>
+          <p className="mt-2">2026 IMEKO Joint Conference - Metro Manila, Philippines</p>
         </div>
       </div>
     </footer>

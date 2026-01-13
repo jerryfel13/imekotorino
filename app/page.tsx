@@ -101,14 +101,14 @@ export default function Home() {
                   rootMargin="0px 0px -100px 0px"
                   delay={0}
                 >
-                  <div className="committee-card committee-card-tc8">
+                  <a href="https://www.imeko.org/index.php/tc8-homepage" target="_blank" rel="noopener noreferrer" className="committee-card committee-card-tc8">
                     <div className="committee-badge committee-badge-tc8">
                       TC8
                     </div>
                     <h3 className="committee-title">
                       Traceability in Metrology
                     </h3>
-                  </div>
+                  </a>
                 </ScrollAnimation>
 
                 {/* TC11 Card */}
@@ -119,14 +119,14 @@ export default function Home() {
                   rootMargin="0px 0px -100px 0px"
                   delay={0}
                 >
-                  <div className="committee-card committee-card-tc11">
+                  <a href="https://www.imeko.org/index.php/tc11-homepage" target="_blank" rel="noopener noreferrer" className="committee-card committee-card-tc11">
                     <div className="committee-badge committee-badge-tc11">
                       TC11
                     </div>
                     <h3 className="committee-title">
                       Measurement in Testing, Inspection and Certification
                     </h3>
-                  </div>
+                  </a>
                 </ScrollAnimation>
 
                 {/* TC24 Card */}
@@ -137,14 +137,14 @@ export default function Home() {
                   rootMargin="0px 0px -100px 0px"
                   delay={0}
                 >
-                  <div className="committee-card committee-card-tc24">
+                  <a href="https://www.imeko.org/index.php/tc24-homepage" target="_blank" rel="noopener noreferrer" className="committee-card committee-card-tc24">
                     <div className="committee-badge committee-badge-tc24">
                       TC24
                     </div>
                     <h3 className="committee-title">
                       Chemical Measurements
                     </h3>
-                  </div>
+                  </a>
                 </ScrollAnimation>
               </div>
             </div>
@@ -155,109 +155,78 @@ export default function Home() {
       {/* Conference Description */}
       <section className="py-32 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-16 items-start">
-            {/* Left Column - Logos, Title, Committees, and Description */}
-            <div className="space-y-8">
-              {/* Logos */}
-              <div className="flex flex-wrap items-center gap-6">
-
-                <div className="flex items-center gap-2">
-                  <Image
-                    src="/onelab.jpg"
-                    alt="OneLab"
-                    width={180}
-                    height={60}
-                    className="h-auto w-auto object-contain"
-                  />
-                </div>
-                <div className="flex items-center gap-2">
-                  <Image
-                    src="/dost-itdi.png"
-                    alt="DOST-ITDI"
-                    width={180}
-                    height={60}
-                    className="h-auto w-auto object-contain"
-                  />
-                </div>
+          <div className="grid md:grid-cols-[3fr_2.5fr] gap-12 items-start">
+            {/* Left Section - Main Content Area */}
+            <div>
+              {/* Promotional Image */}
+              <div className="relative w-full">
+                <Image
+                  src="/cfpimghome.jpg"
+                  alt="IMEKO Joint Conference 2026"
+                  width={800}
+                  height={800}
+                  className="w-full h-auto object-contain rounded-lg shadow-md"
+                />
               </div>
+            </div>
 
-              {/* Conference Title */}
-              <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-                2026 IMEKO Joint Conference
-              </h2>
+            {/* Right Section - Sidebar Panel */}
+            <div className="conference-sidebar sticky top-24">
+              <div className="sidebar-content">
+                {/* Logos in Sidebar - Side by Side */}
+                <div className="sidebar-logos">
+                  <div className="sidebar-logo-item">
+                    <Image
+                      src="/logo_imeko_smaller.jpg"
+                      alt="IMEKO"
+                      width={180}
+                      height={90}
+                      className="h-auto w-auto object-contain sidebar-logo"
+                    />
+                  </div>
+                  <div className="sidebar-logo-item sidebar-logo-dost">
+                    <div className="sidebar-dost-container">
+                      <Image
+                        src="/Logo_INRIM_edited.JPG"
+                        alt="DOST-ITDI"
+                        width={210}
+                        height={200}
+                        className="h-auto w-auto object-contain sidebar-logo-dost-img"
+                      />
+                    
+                    </div>
+                  </div>
+                </div>
 
-              {/* Technical Committees Section */}
-              <div className="space-y-4">
-                <h3 className="text-sm font-bold text-primary-600 uppercase tracking-wider">
+                {/* Simplified Title */}
+                <h2 className="sidebar-title">
+                  2026 IMEKO Joint Conference
+                </h2>
+
+                {/* Technical Committees Heading */}
+                <h3 className="sidebar-committees-heading">
                   TECHNICAL COMMITTEES
                 </h3>
-                <div className="space-y-3">
-                  <div className="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                    <p className="text-gray-900 font-medium">
+
+                {/* Technical Committees Boxes */}
+                <div className="sidebar-committees-list">
+                  <div className="sidebar-committee-box">
+                    <p className="sidebar-committee-text">
                       <span className="font-bold">TC8:</span> Traceability in Metrology
                     </p>
                   </div>
-                  <div className="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                    <p className="text-gray-900 font-medium">
+                  <div className="sidebar-committee-box">
+                    <p className="sidebar-committee-text">
                       <span className="font-bold">TC11:</span> Measurement in Testing, Inspection and Certification
                     </p>
                   </div>
-                  <div className="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                    <p className="text-gray-900 font-medium">
+                  <div className="sidebar-committee-box">
+                    <p className="sidebar-committee-text">
                       <span className="font-bold">TC24:</span> Chemical Measurements
                     </p>
                   </div>
                 </div>
               </div>
-
-              {/* Conference Description */}
-              <div className="space-y-4">
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                  This international conference aims to gather experts both from industry and academia,
-                  covering different topics from the fields of <strong className="font-semibold text-primary-700">'Traceability in Metrology' (IMEKO TC8)</strong>,
-                  <strong className="font-semibold text-primary-700"> 'Measurement in Testing, Inspection and Certification' (IMEKO TC11)</strong>, and <strong className="font-semibold text-primary-700">'Chemical Measurements' (IMEKO TC24)</strong>.
-                </p>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                  Considering the wide interdisciplinarity of the three Technical Committees, many topics and metrological
-                  issues will be addressed during the Conference, including (but not limited to): certified reference materials,
-                  digitalization in Traceability, digital twins, quality management and conformity assessment in TIC Sector,
-                  chemical and biochemical sensors, gas analysis for climate change and energy transition, chemical metrology.
-                </p>
-              </div>
-            </div>
-
-            {/* Right Column - Image */}
-            <div className="relative w-full">
-              <Image
-                src="/cfpimghome.jpg"
-                alt="Metro Manila, Philippines"
-                width={600}
-                height={400}
-                className="w-full h-auto object-cover rounded-lg shadow-lg"
-              />
-            </div>
-          </div>
-
-          {/* Call for Papers Section - Full Width */}
-          <div className="mt-16 space-y-4">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
-              CALL FOR PAPERS
-            </h3>
-            <div className="w-full h-0.5 bg-primary-600"></div>
-            <div className="space-y-4 text-base md:text-lg text-gray-700 leading-relaxed">
-              <p>
-                Authors are invited to submit abstracts of 250 words, related to the topics covered by the 3 IMEKO Technical Committees.
-                After notification of acceptance, Authors will have the opportunity to submit a full paper (3 to 5 pages),
-                to be published in the Conference Proceedings.
-              </p>
-              <p>
-                All contributions will be peer-reviewed and acceptance will be based on quality, originality and relevance.
-                Accepted and presented full papers will be submitted for inclusion in Scopus after the event.
-              </p>
-              <p>
-                After the Conference, selected Authors will be invited to submit an extended version of their papers to 'Measurement' or to 'Acta IMEKO'.
-                Additional information about post-conference special issues will be provided on the conference website.
-              </p>
             </div>
           </div>
         </div>
@@ -286,13 +255,13 @@ export default function Home() {
               rootMargin="0px 0px -100px 0px"
               delay={0}
             >
-              <div className="group p-6 rounded-xl bg-blue-50 border-l-4 border-blue-600 hover:bg-blue-100/80 transition-all duration-300 hover-lift cursor-pointer">
+              <a href="https://www.imeko.org/index.php/tc8-homepage" target="_blank" rel="noopener noreferrer" className="group p-6 rounded-xl bg-blue-50 border-l-4 border-blue-600 hover:bg-blue-100/80 transition-all duration-300 hover-lift cursor-pointer block">
                 <div className="text-4xl font-extrabold text-blue-600 mb-4 group-hover:scale-110 transition-transform duration-300 inline-block">TC8</div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-blue-700 transition-colors duration-300">Traceability in Metrology</h3>
                 <p className="text-gray-700 leading-relaxed text-base">
                   Exploring the latest developments in traceability, measurement standards, and metrological infrastructure.
                 </p>
-              </div>
+              </a>
             </ScrollAnimation>
 
             <ScrollAnimation
@@ -302,13 +271,13 @@ export default function Home() {
               rootMargin="0px 0px -100px 0px"
               delay={0}
             >
-              <div className="group p-6 rounded-xl bg-green-50 border-l-4 border-green-600 hover:bg-green-100/80 transition-all duration-300 hover-lift cursor-pointer">
+              <a href="https://www.imeko.org/index.php/tc11-homepage" target="_blank" rel="noopener noreferrer" className="group p-6 rounded-xl bg-green-50 border-l-4 border-green-600 hover:bg-green-100/80 transition-all duration-300 hover-lift cursor-pointer block">
                 <div className="text-4xl font-extrabold text-green-600 mb-4 group-hover:scale-110 transition-transform duration-300 inline-block">TC11</div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-green-700 transition-colors duration-300">Measurement in Testing, Inspection and Certification</h3>
                 <p className="text-gray-700 leading-relaxed text-base">
                   Advancing measurement practices in testing, inspection, and certification processes.
                 </p>
-              </div>
+              </a>
             </ScrollAnimation>
 
             <ScrollAnimation
@@ -318,13 +287,13 @@ export default function Home() {
               rootMargin="0px 0px -100px 0px"
               delay={0}
             >
-              <div className="group p-6 rounded-xl bg-purple-50 border-l-4 border-purple-600 hover:bg-purple-100/80 transition-all duration-300 hover-lift cursor-pointer">
+              <a href="https://www.imeko.org/index.php/tc24-homepage" target="_blank" rel="noopener noreferrer" className="group p-6 rounded-xl bg-purple-50 border-l-4 border-purple-600 hover:bg-purple-100/80 transition-all duration-300 hover-lift cursor-pointer block">
                 <div className="text-4xl font-extrabold text-purple-600 mb-4 group-hover:scale-110 transition-transform duration-300 inline-block">TC24</div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-purple-700 transition-colors duration-300">Chemical Measurements</h3>
                 <p className="text-gray-700 leading-relaxed text-base">
                   Focusing on chemical metrology, sensors, and analytical measurement techniques.
                 </p>
-              </div>
+              </a>
             </ScrollAnimation>
           </div>
         </div>
@@ -368,7 +337,7 @@ export default function Home() {
                     </h3>
                   </div>
                   <p className="text-xl md:text-lg lg:text-xl font-bold text-primary-600 ml-9">
-                    01 March 2026<br />(or 15 Mar 2026)
+                    01 March 2026
                   </p>
                 </div>
               </ScrollAnimation>
@@ -463,7 +432,7 @@ export default function Home() {
 
 
       {/* Sponsors/Partners Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-gray-50 hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollAnimation animationIn="fade-in-up" delay={0}>
             <div className="text-center mb-12">

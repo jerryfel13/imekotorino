@@ -42,12 +42,24 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-baseline space-x-6">
               <Link
                 href="/"
                 className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors"
               >
                 Home
+              </Link>
+              <Link
+                href="/book-of-abstracts"
+                className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors"
+              >
+                Book of abstracts
+              </Link>
+              <Link
+                href="/proceedings"
+                className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors"
+              >
+                Proceedings
               </Link>
               <div className="relative group">
                 <button className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors flex items-center">
@@ -73,6 +85,24 @@ export default function Navigation() {
                   </div>
                 </div>
               </div>
+              <Link
+                href="/program"
+                className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors"
+              >
+                Program
+              </Link>
+              <Link
+                href="/authors"
+                className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors"
+              >
+                Authors
+              </Link>
+              <Link
+                href="/patronages-sponsors"
+                className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors"
+              >
+                Patronages Sponsors
+              </Link>
               <Link
                 href="/contacts"
                 className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors"
@@ -105,6 +135,20 @@ export default function Navigation() {
             >
               Home
             </Link>
+            <Link
+              href="/book-of-abstracts"
+              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md"
+              onClick={() => setIsOpen(false)}
+            >
+              Book of abstracts
+            </Link>
+            <Link
+              href="/proceedings"
+              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md"
+              onClick={() => setIsOpen(false)}
+            >
+              Proceedings
+            </Link>
             <div className="px-3 py-2">
               <div className="text-base font-medium text-gray-700 mb-2">About</div>
               <div className="pl-4 space-y-1">
@@ -124,6 +168,27 @@ export default function Navigation() {
                 </Link>
               </div>
             </div>
+            <Link
+              href="/program"
+              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md"
+              onClick={() => setIsOpen(false)}
+            >
+              Program
+            </Link>
+            <Link
+              href="/authors"
+              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md"
+              onClick={() => setIsOpen(false)}
+            >
+              Authors
+            </Link>
+            <Link
+              href="/patronages-sponsors"
+              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md"
+              onClick={() => setIsOpen(false)}
+            >
+              Patronages Sponsors
+            </Link>
             <Link
               href="/contacts"
               className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md"

@@ -32,18 +32,33 @@ export default function TorinoSection() {
 
         {/* Main Content: Video and Text */}
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 mb-12">
-          {/* Left: Video Player */}
-          <ScrollAnimation animationIn="fade-in-up" delay={100}>
-            <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl border-2 border-gray-200">
-              <iframe
-                src="https://www.youtube.com/embed/-76dmlwj_fQ"
-                title="IMEKO Joint Conference"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
-              ></iframe>
-            </div>
-          </ScrollAnimation>
+          {/* Left: Video Players */}
+          <div className="space-y-8">
+            <ScrollAnimation animationIn="fade-in-up" delay={100}>
+              <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl border-2 border-gray-200">
+                <iframe
+                  src="https://www.youtube.com/embed/-76dmlwj_fQ"
+                  title="IMEKO Joint Conference"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                ></iframe>
+              </div>
+            </ScrollAnimation>
+            
+            {/* Second Video */}
+            <ScrollAnimation animationIn="fade-in-up" delay={150}>
+              <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl border-2 border-gray-200">
+                <iframe
+                  src="https://www.youtube.com/embed/SpQpWCcNIlg"
+                  title="Metro Manila, Philippines"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                ></iframe>
+              </div>
+            </ScrollAnimation>
+          </div>
 
           {/* Right: Text Description and Buttons */}
           <ScrollAnimation animationIn="fade-in-up" delay={200}>

@@ -283,6 +283,8 @@ a {
   gap: 18px;
   margin-bottom: 14px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  color: inherit;
 }
 
 .committee-card:hover {
@@ -334,5 +336,150 @@ a {
   color: #111827;
   line-height: 1.5;
   font-family: var(--font-poppins), sans-serif;
+}
+
+/* Conference Sidebar Panel Styles */
+.conference-sidebar {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 32px 28px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  max-width: 100%;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar-logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 4px;
+}
+
+.sidebar-logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-logo-item.sidebar-logo-dost {
+  align-items: center;
+  text-align: right;
+}
+
+.sidebar-dost-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar-logo {
+  max-width: 100%;
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+}
+
+.sidebar-logo-dost-img {
+  max-width: 100%;
+  height: 75px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.sidebar-dost-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  text-align: right;
+}
+
+.sidebar-dost-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-poppins), sans-serif;
+}
+
+.sidebar-dost-subtitle {
+  font-size: 10px;
+  font-weight: 400;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-poppins), sans-serif;
+  line-height: 1.3;
+}
+
+.sidebar-dost-tagline {
+  font-size: 10px;
+  font-weight: 400;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-poppins), sans-serif;
+  line-height: 1.3;
+}
+
+.sidebar-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  line-height: 1.3;
+  font-family: var(--font-poppins), sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-committees-heading {
+  font-size: 11px;
+  font-weight: 700;
+  color: #0284c7;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: var(--font-poppins), sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-committees-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-committee-box {
+  background-color: #e8e8e8;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.sidebar-committee-text {
+  font-size: 13px;
+  color: #000000;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: var(--font-poppins), sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.sidebar-committee-text .font-bold {
+  font-weight: 700;
 }
 

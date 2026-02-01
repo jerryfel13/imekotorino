@@ -69,9 +69,27 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-          <p>© Copyright 2026. All Rights Reserved.</p>
-          <p className="mt-2">2026 IMEKO Joint Conference - Metro Manila, Philippines</p>
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+            <Image
+              src="/dost-itdi.png"
+              alt="DOST-ITDI Logo"
+              width={180}
+              height={60}
+              className="h-auto object-contain"
+            />
+            <div className="text-center md:text-left text-sm text-gray-400">
+              <p>© Copyright 2026. All Rights Reserved.</p>
+              <p className="mt-1">This site is created, maintained, and managed by DOST-ITDI.</p>
+              <p className="mt-1">
+                Please feel free to{' '}
+                <Link href="/contacts" className="text-primary-400 hover:text-primary-300 underline">
+                  contact us
+                </Link>{' '}
+                for any assistance.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

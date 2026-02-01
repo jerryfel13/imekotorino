@@ -1,4 +1,5 @@
 import { MapPin, Building, Calendar, Users, Wifi, Utensils, Car } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Venue() {
   const venueInfo = [
@@ -10,22 +11,22 @@ export default function Venue() {
     {
       icon: Building,
       title: 'Venue Details',
-      content: 'The conference will be held at a prestigious venue in Torino, easily accessible from the city center and major transportation hubs.',
+      content: 'Specific venue will be announced soon. The venue to be chosen is near the international airport and easily accessible to major transportation hubs.',
     },
     {
       icon: Calendar,
       title: 'Dates',
-      content: 'September 14-17, 2025',
+      content: '26-29 August 2026',
     },
     {
       icon: Users,
       title: 'Capacity',
-      content: 'Designed to accommodate hundreds of participants with multiple parallel sessions.',
+      content: 'Venue to be chosen can accommodate hundreds of participants with facilities ideal for both plenary lectures and parallel sessions.',
     },
   ]
 
   const facilities = [
-    { icon: Wifi, name: 'High-Speed WiFi', description: 'Free wireless internet throughout the venue' },
+    { icon: Wifi, name: 'WiFi Connectivity', description: 'Free wireless internet throughout the venue' },
     { icon: Utensils, name: 'Catering Services', description: 'Coffee breaks and lunch options available' },
     { icon: Car, name: 'Parking', description: 'Parking facilities available nearby' },
     { icon: Building, name: 'Accessibility', description: 'Fully accessible venue with modern facilities' },
@@ -33,20 +34,19 @@ export default function Venue() {
 
   const attractions = [
     {
-      title: 'Egyptian Museum',
-      description: 'One of the world\'s most important collections of Egyptian antiquities',
+      title: 'Intramuros',
+      description: 'Intramuros, "The Walled City," is the oldest district in Manila. This is what remains of the fortified city, which was the seat of power during Spanish Colonial times (1521-1898).',
+      image: '/intramurosfullview.jpg',
     },
     {
-      title: 'Royal Palaces',
-      description: 'UNESCO World Heritage sites from the House of Savoy',
+      title: 'Fort Santiago',
+      description: 'This museum and public park was built as a stone fortress at the turn of the 17th century and marked the beginning of the walled city\'s riverside barricades.',
+      image: '/intramuros-2.jpg',
     },
     {
-      title: 'Mole Antonelliana',
-      description: 'The symbol of Torino, housing the National Cinema Museum',
-    },
-    {
-      title: 'Culinary Delights',
-      description: 'Experience authentic Piedmontese cuisine and world-renowned wines',
+      title: 'National Museum',
+      description: 'This grand exhibit house features the country\'s most historic works of culture and national heritage, including the paintings of heralded Philippine artist Felix Resurreccion Hidalgo.',
+      image: '/nationalmuseum.jpg',
     },
   ]
 
@@ -60,7 +60,7 @@ export default function Venue() {
             <h1 className="text-4xl md:text-5xl font-bold">Conference Venue</h1>
           </div>
           <p className="text-xl text-primary-100 mt-4">
-            Discover Torino, the beautiful host city for the 2025 IMEKO Joint Conference
+            Discover Metro Manila, the beautiful Capital of the Republic of the Philippines, the host city for the 2026 IMEKO Joint Conference
           </p>
         </div>
       </section>
@@ -111,21 +111,25 @@ export default function Venue() {
           </div>
         </div>
 
-        {/* About Torino */}
+        {/* About Metro Manila */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">About Torino</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">About Metro Manila</h2>
           <div className="prose prose-lg max-w-none text-gray-700 mb-8">
             <p className="text-lg mb-4">
-              Piedmont's capital, Torino is a city with a unique charm, an important history that has left its mark 
-              on this metropolis that speaks of the past, whilst constantly looking to the future.
+              Metro Manila, the bustling capital region of the Philippines, is a dynamic metropolis that seamlessly blends 
+              centuries-old heritage with modern innovation, creating a vibrant urban landscape that honors its storied past 
+              while embracing a promising future.
             </p>
             <p className="text-lg mb-4">
-              At the foot of the Alps, Turin was once the capital of the House of Savoy and birthplace of the Italian resurgence. 
-              Today, it is an innovation hub of Italian industry, rich in art and culture.
+              Comprising 16 cities and one municipality, Metro Manila serves as the nation's political, economic, and cultural 
+              heart. From the historic Intramuros, the walled city that tells the story of Spanish colonial times, to the 
+              gleaming skyscrapers of Makati and BGC, this megacity showcases the Philippines' remarkable transformation 
+              into a thriving center of commerce and technology in Southeast Asia.
             </p>
             <p className="text-lg">
-              Dynamic and baroque, Turin wows with its renowned Egyptian museum, architectural and monumental wonders, 
-              art galleries, international events and delicious traditional food.
+              Rich in culture and tradition, Metro Manila captivates visitors with its world-class museums, colonial-era 
+              architecture, vibrant festivals, diverse culinary scene featuring both local delicacies and international cuisine, 
+              and warm Filipino hospitality that makes every experience memorable and welcoming.
             </p>
           </div>
         </div>
@@ -133,33 +137,59 @@ export default function Venue() {
         {/* Local Attractions */}
         <div className="bg-white rounded-xl shadow-lg p-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Local Attractions</h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {attractions.map((attraction, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-primary-50 to-white p-6 rounded-lg border border-primary-200 hover:border-primary-400 hover:shadow-md transition-all"
+                className="bg-gradient-to-br from-primary-50 to-white rounded-lg border border-primary-200 hover:border-primary-400 hover:shadow-md transition-all overflow-hidden"
               >
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{attraction.title}</h3>
-                <p className="text-gray-700">{attraction.description}</p>
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={attraction.image}
+                    alt={attraction.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{attraction.title}</h3>
+                  <p className="text-gray-700 text-sm">{attraction.description}</p>
+                </div>
               </div>
             ))}
           </div>
+          <p className="text-gray-700 mt-8 text-center">
+            More facts about <strong>THE PHILIPPINES</strong> can be explored at{' '}
+            <a
+              href="https://www.tourism.gov.ph/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-600 hover:text-primary-700 font-semibold underline"
+            >
+              tourism.gov.ph
+            </a>
+          </p>
         </div>
 
         {/* Travel Information */}
         <div className="mt-12 bg-primary-50 border-l-4 border-primary-600 p-6 rounded-lg">
           <h3 className="text-xl font-semibold text-gray-900 mb-4">Travel Information</h3>
-          <p className="text-gray-800 mb-4">
-            Torino is easily accessible by:
-          </p>
-          <ul className="list-disc list-inside text-gray-800 space-y-2">
-            <li><strong>Air:</strong> Torino-Caselle Airport (TRN) is approximately 16 km from the city center</li>
-            <li><strong>Train:</strong> Torino Porta Nuova and Porta Susa stations connect to major Italian and European cities</li>
-            <li><strong>Road:</strong> Well-connected via major highways (A4, A5, A6)</li>
+          <ul className="list-disc list-inside text-gray-800 space-y-3">
+            <li>Metro Manila, Republic of the Philippines is easily accessible by air through entry point at the Ninoy Aquino International Airport (NAIA).</li>
+            <li>
+              Upon arrival, all foreign nationals are required to accomplish the Philippine Travel Information System (
+              <a
+                href="https://etravel.gov.ph/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-600 hover:text-primary-700 font-semibold underline"
+              >
+                eTravel
+              </a>
+              ).
+            </li>
+            <li>Detailed travel information and accommodation recommendations will be posted soon.</li>
           </ul>
-          <p className="text-gray-800 mt-4">
-            Detailed travel information and accommodation recommendations will be provided in the conference registration materials.
-          </p>
         </div>
       </div>
     </div>

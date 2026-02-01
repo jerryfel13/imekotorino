@@ -55,10 +55,10 @@ export default function Contacts() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
                   <a
-                    href="mailto:info@imekotorino2025.org"
+                    href="mailto:info_manila2026@imeko.org"
                     className="text-primary-600 hover:text-primary-700 transition-colors"
                   >
-                    info@imekotorino2025.org
+                    info_manila2026@imeko.org
                   </a>
                 </div>
               </div>
@@ -71,7 +71,7 @@ export default function Contacts() {
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">Location</h3>
                   <p className="text-gray-700">
                     Metro Manila, Philippines<br />
-                    September 14-17, 2025
+                    26-29 August 2026
                   </p>
                 </div>
               </div>
@@ -83,7 +83,7 @@ export default function Contacts() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">Conference Office</h3>
                   <p className="text-gray-700">
-                    For general inquiries and registration information, please contact us via email.
+                    For general inquiries and registration information, email correspondence.
                   </p>
                 </div>
               </div>
@@ -201,14 +201,16 @@ export default function Contacts() {
               className="block p-6 bg-gradient-to-br from-primary-50 to-white rounded-lg border border-primary-200 hover:border-primary-400 hover:shadow-md transition-all"
             >
               <h3 className="font-semibold text-lg text-gray-900 mb-2">Venue Information</h3>
-              <p className="text-gray-600 text-sm">Learn about Torino and the conference venue</p>
+              <p className="text-gray-600 text-sm">Learn about Metro Manila, Philippines</p>
             </a>
             <a
-              href="/"
+              href="https://conferences.imeko.org/event/15/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="block p-6 bg-gradient-to-br from-primary-50 to-white rounded-lg border border-primary-200 hover:border-primary-400 hover:shadow-md transition-all"
             >
               <h3 className="font-semibold text-lg text-gray-900 mb-2">Call for Papers</h3>
-              <p className="text-gray-600 text-sm">Submit your abstract and paper</p>
+              <p className="text-gray-600 text-sm">Submit your abstract for paper presentation</p>
             </a>
           </div>
         </div>

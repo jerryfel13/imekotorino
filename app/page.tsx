@@ -31,29 +31,42 @@ export default function Home() {
 
           {/* Bottom-left Buttons */}
           <div className="absolute inset-0 z-20 flex items-end justify-start pb-8 sm:pb-12 md:pb-16 pl-4 sm:pl-8 md:pl-16">
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex gap-3 sm:gap-6">
               <Link
                 href="#call-for-papers"
-                className="group bg-white text-primary-700 px-10 py-4 rounded-xl font-bold text-lg
-                 hover:bg-gray-50 transition-all duration-300
-                 flex items-center justify-center gap-3
-                 shadow-2xl hover:scale-105"
+                className="group
+      inline-flex w-fit self-start
+      bg-white text-primary-700
+      px-4 sm:px-10 py-2 sm:py-4
+      rounded-lg sm:rounded-xl
+      font-semibold sm:font-bold
+      text-sm sm:text-lg
+      hover:bg-gray-50 transition-all duration-300
+      items-center gap-2 sm:gap-3
+      shadow-md sm:shadow-2xl"
               >
                 <span>Submit Your Abstract</span>
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
+                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
               </Link>
 
               <Link
                 href="/about/venue"
-                className="group bg-primary-600 text-white px-10 py-4 rounded-xl font-bold text-lg
-                 hover:bg-primary-700 transition-all duration-300
-                 flex items-center justify-center gap-3
-                 shadow-2xl hover:scale-105"
+                className="group
+      inline-flex w-fit self-start
+      bg-primary-600 text-white
+      px-4 sm:px-10 py-2 sm:py-4
+      rounded-lg sm:rounded-xl
+      font-semibold sm:font-bold
+      text-sm sm:text-lg
+      hover:bg-primary-700 transition-all duration-300
+      items-center gap-2 sm:gap-3
+      shadow-md sm:shadow-2xl"
               >
                 <span>Learn More</span>
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
+                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
               </Link>
             </div>
+
           </div>
 
         </div>
@@ -193,7 +206,7 @@ export default function Home() {
                         height={200}
                         className="h-auto w-auto object-contain sidebar-logo-dost-img"
                       />
-                    
+
                     </div>
                   </div>
                 </div>
